@@ -11,23 +11,14 @@ public class Main {
 		//1 - laev
 		//2 - pihta saanud laev
 
-		int count1 = 0;
-		int count2 = 0;
-		while (count1<9){
-			count2=0;
-			//vahepeal peab counti ära nullima, muidu ta teisel korral
-			//ei käivita sisemist tsüklit (sest count2=9)
-			while (count2<9){
-				laud[count1][count2] = (int)(Math.random()*1.3);
-				count2++;
+		for (int i=0; i<9; i++){
+			for (int j=0; j<9; j++){
+				laud[i][j] = (int)(Math.random()*1.3);
 			}
-			count1++;
 		}
 
-		int count3=0;
-		while (count3<9){
-			System.out.println(Arrays.toString(laud[count3]));
-			count3++;
+		for (int i = 0; i < 9 ; i++) {
+			System.out.println(Arrays.toString(laud[i]));
 		}
 		while (true) {
 			Scanner sc = new Scanner(System.in);
